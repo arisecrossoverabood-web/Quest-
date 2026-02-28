@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔥 لعبة الجرأة 🔥</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+<h1>🔥 لعبة الجرأة 🔥</h1>
+<div id="status" class="status offline">❌ غير متصل</div>
+
+<input id="name" placeholder="اسمك">
+<select id="level">
+<option value="light">خفيف</option>
+<option value="medium">متوسط</option>
+<option value="strong">قوي</option>
+</select>
+
+<button onclick="createRoom()">إنشاء غرفة</button>
+
+<input id="roomInput" placeholder="كود الغرفة">
+<button onclick="joinRoom()">دخول</button>
+
+<h2 id="roomCode"></h2>
+
+<div id="questionBox"></div>
+<div id="timer"></div>
+
+<button onclick="newQuestion()">سؤال جديد</button>
+<button onclick="addPoint()">+ نقطة</button>
+<button onclick="saveScores()">إنهاء الجولة</button>
+
+<div id="players"></div>
+
+<div class="chat">
+<div id="chatBox"></div>
+<input id="chatInput" placeholder="اكتب رسالة">
+<button onclick="sendChat()">إرسال</button>
+</div>
+
+<h3>🏆 الترتيب العام</h3>
+<div id="topPlayers"></div>
+
+</div>
+
+<script src="/static/game.js"></script>
+</body>
+</html>
